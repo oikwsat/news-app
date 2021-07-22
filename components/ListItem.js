@@ -1,17 +1,17 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
-const ListItem = () => {
+const ListItem = ({imageUrl, title, author}) => {
   return (
     <View style={styles.itemContainer}>
       <View style={styles.leftContainer}>
-        <Image style={{width: 100, height: 100,}} source={{uri: 'https://picsum.photos/id/10/200/200'}}/>
+        <Image style={{width: 100, height: 100,}} source={{uri: imageUrl}}/>
       </View>
       <View style={styles.rightContainer}>
         <Text style={styles.text} numberOfLines={3}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {title}
         </Text>
-        <Text style={styles.subText}>React News</Text>
+        <Text style={styles.subText}>{author}</Text>
       </View>
     </View>
   );
