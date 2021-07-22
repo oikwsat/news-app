@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, SafeAreaView, FlatList } from 'react-native';
 import ListItem from './components/ListItem';
-import articles from './dummies/articles'
+import dummyarticles from './dummies/articles'
 
 export default function App() {
+  const [articles, setArticles] = useState([]);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setArticles(dummyarticles);
+    }, 2000);
+    return () => clearnTimeout(timer);
+  }, []);
+
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
