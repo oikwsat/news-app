@@ -34,6 +34,10 @@ const ClipStack = () => {
         component={ClipScreen}
         options={{headerShown: false}}
       />
+      <Stack.Screen
+        name="Article"
+        component={ArticleScreen}
+      />
     </Stack.Navigator>
   );
 };
