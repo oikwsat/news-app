@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-const ListItem = ({imageUrl, title, author, onPress}) => {
+export const ListItem = ({imageUrl, title, author, onPress}) => {
   return (
     <TouchableOpacity style={styles.itemContainer} onPress={onPress}>
       <View style={styles.leftContainer}>
@@ -47,5 +47,3 @@ const styles = StyleSheet.create({
     color: 'gray',
   }
 });
-
-export default ListItem;

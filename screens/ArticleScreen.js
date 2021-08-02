@@ -3,10 +3,10 @@ import { StyleSheet, SafeAreaView } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { useDispatch, useSelector } from 'react-redux';
 import { addClip, deleteClip } from '../store/actions/user';
-import ClipButton from '../components/ClipButton';
-import Loading from '../components/Loading';
+import { ClipButton } from '../components/ClipButton';
+import { Loading } from '../components/Loading';
 
-export default function ArticleScreen({route}) {
+const ArticleScreen = ({route}) => {
   const {article} = route.params;
 
   const dispatch = useDispatch();
@@ -44,3 +44,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+export default ArticleScreen;

@@ -56,7 +56,7 @@ const screenOption = ({route}) => ({
   },
 });
 
-export default function AppNavigator() {
+const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator screenOptions={screenOption}>
@@ -66,3 +66,5 @@ export default function AppNavigator() {
     </NavigationContainer>
   );
 }
+
+export default AppNavigator;

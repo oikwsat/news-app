@@ -2,9 +2,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { StyleSheet, SafeAreaView, Text } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
-import ListItem from '../components/ListItem';
+import { ListItem } from '../components/ListItem';
 
-export default function ClipScreen({navigation}) {
+const ClipScreen = ({navigation}) => {
   const user = useSelector(state => state.user);
   const {clips} = user;
 
@@ -33,3 +33,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+export default ClipScreen;

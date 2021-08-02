@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { StyleSheet, SafeAreaView, FlatList, RefreshControl } from 'react-native';
-import ListItem from '../components/ListItem';
-import Loading from '../components/Loading';
+import { ListItem } from '../components/ListItem';
+import { Loading } from '../components/Loading';
 import Constants from 'expo-constants';
 import axios from 'axios';
 
 const URL = `https://newsapi.org/v2/top-headlines?country=jp&apiKey=${Constants.manifest.extra.newsApiKey}`;
 
-export default function HomeScreen(props) {
-  const {navigation} = props;
+const HomeScreen = ({navigation}) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
@@ -83,3 +82,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+export default HomeScreen;
